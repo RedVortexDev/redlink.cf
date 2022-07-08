@@ -1,0 +1,174 @@
+@font-face {
+	font-family: "SmallCaps";
+	src: url("./Minecraft\ Small\ Caps.ttf");
+}
+
+body {
+	background-color: #333333;
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #eeeeee;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #292929;
+	margin: 0 auto;
+	width: 60%;
+	height: 150%;
+	text-align: center;
+	padding: 1%;
+	margin-top: 1%;
+	border-radius: 10px;
+	filter: drop-shadow(0px 0px 10px #000000);
+}
+
+header h2 {
+	font-size: 1.5em;
+	font-style: italic;
+	margin: 0;
+}
+
+header h1 {
+	margin: 0;
+}
+
+.smallcaps {
+	font-family: "SmallCaps";
+}
+
+.font {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10%;
+}
+
+.font input {
+	background-color: #292929;
+	color: white;
+	font-family: "SmallCaps";
+	font-size: 1.5em;
+	border: 0.2em solid #202020;
+}
+button {
+	background-color: #292929;
+	color: white;
+	font-size: 1.5em;
+	border: 0.2em solid #202020;
+	border-radius: 0.5em;
+	word-break: break-all;
+}
+
+button:hover {
+	background-color: #202020;
+}
+
+button:active {
+	background-color: #353535;
+}
+
+.font .supported {
+	margin-bottom: -0.5em;
+	font-size: 1.5em;
+}
+
+.font .characters {
+	background-color: #313131;
+	font-family: smallCaps;
+	font-size: 1.2em;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+}
+
+/* Modal Content */
+.modal-content {
+	margin-left: 25%;
+	position: fixed;
+	bottom: 0;
+	background-color: #fefefe;
+	width: 50%;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s;
+}
+
+.modal-content a {
+	text-decoration: none;
+	color: #ffffff;
+	margin: 0.5em;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: #6eb36e;
+	color: rgb(0, 0, 0);
+}
+
+.modal-body {
+	padding: 2px 16px;
+	background-color: #292929;
+	font-size: 1.3em;
+	color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0;
+	}
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0;
+	}
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
