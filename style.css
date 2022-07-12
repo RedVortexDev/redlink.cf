@@ -77,6 +77,7 @@ button:active {
 }
 
 .font .characters {
+	text-align: center;
 	background-color: #313131;
 	font-family: smallCaps;
 	font-size: 1.2em;
