@@ -1,3 +1,11 @@
+// remove .html from link
+let url = window.location.href;
+if (url.includes(".html")) {
+	window.location.replace(url.replace(".html", ""));
+}
+if (url.includes("index.html")) {
+	window.location.replace(url.replace("index.html", ""));
+}
 // Open nav bar on click
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
