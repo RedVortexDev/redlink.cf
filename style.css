@@ -21,6 +21,13 @@ a {
 	text-align: center;
 	font-size: 1.2em;
 }
+.link {
+	text-decoration: underline;
+	color: rgb(4, 121, 199);
+}
+.light .link {
+	color: #004f66;
+}
 .title {
 	font-size: min(250%, 8vw);
 	font-weight: bold;
