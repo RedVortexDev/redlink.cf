@@ -1,10 +1,10 @@
 // remove .html from link
+if (url.includes("index.html")) {
+	window.location.replace(url.replace("index.html", ""));
+}
 let url = window.location.href;
 if (url.includes(".html")) {
 	window.location.replace(url.replace(".html", ""));
-}
-if (url.includes("index.html")) {
-	window.location.replace(url.replace("index.html", ""));
 }
 // Open nav bar on click
 const primaryNav = document.querySelector(".primary-navigation");
@@ -57,6 +57,7 @@ const colorSchemeToggle = document.getElementById("color-scheme-toggle");
 
 if (!colorScheme) {
 	localStorage.setItem("colorScheme", "dark");
+	colorScheme = "dark";
 	console.log("No color scheme set, setting to dark");
 }
 
