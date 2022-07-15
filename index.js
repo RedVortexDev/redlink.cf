@@ -1,8 +1,8 @@
 // remove .html from link
+let url = window.location.href;
 if (url.includes("index.html")) {
 	window.location.replace(url.replace("index.html", ""));
 }
-let url = window.location.href;
 if (url.includes(".html")) {
 	window.location.replace(url.replace(".html", ""));
 }
