@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/png" href="./images/Logo.png" />
 		<link
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
@@ -98,7 +99,10 @@
 					<br />
 					ñΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩâàäçéèêëîïôùûüœ
 				</p>
-				<button id="downloadFont" class="pulse">Get it</button>
+
+				<div class="flex" id="downloadFont">
+					<a href="#0" class="bttn">Get it</a>
+				</div>
 			</div>
 		</article>
 
@@ -151,55 +155,57 @@
 				background-color: #dfdfdf;
 				color: black;
 			}
-			.pulse:hover,
-			.pulse:focus {
-				-webkit-animation: pulse 1s;
-				animation: pulse 1s;
-				box-shadow: 0 0 0 2em transparent;
+			/* button */
+			.flex {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 
-			@-webkit-keyframes pulse {
-				0% {
-					box-shadow: 0 0 0 0 var(--hover);
-				}
+			a.bttn {
+				margin-top: 2em;
+				color: #00ff4c;
+				text-decoration: none;
+				-webkit-transition: 0.3s all ease;
+				transition: 0.3s ease all;
 			}
-
-			@keyframes pulse {
-				0% {
-					box-shadow: 0 0 0 0 var(--hover);
-				}
+			a.bttn:hover {
+				color: rgb(0, 0, 0);
 			}
-			.pulse {
-				--color: #6eef95;
-				--hover: #6eefd3;
-				--active: #41ca6a;
+			.bttn {
+				font-size: 18px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				display: inline-block;
+				text-align: center;
+				width: 270px;
+				font-weight: bold;
+				padding: 14px 0px;
+				border: 3px solid #00ff4c;
+				border-radius: 2px;
+				position: relative;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16),
+					0 3px 6px rgba(0, 0, 0, 0.1);
 			}
-			.light .pulse {
-				--color: #0e4600;
+			.bttn:before {
+				-webkit-transition: 0.5s all ease;
+				transition: 0.5s all ease;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				right: 50%;
+				bottom: 0;
+				opacity: 0;
+				content: "";
+				background-color: #00c060;
+				z-index: -2;
 			}
-			.pulse {
-				color: var(--color);
-				transition: 0.25s;
-			}
-			.pulse:hover {
-				border-color: var(--hover);
-				color: #fff;
-				filter: drop-shadow(0 0 0.5em var(--hover));
-				filter: drop-shadow(0 0.5em 0.5em black);
-				transform: translateY(-0.2em);
-			}
-			.pulse:active {
-				transform: translateY(0.2em);
-				border-color: var(--active);
-			}
-			.pulse {
-				background: none;
-				border: 2px solid;
-				font: inherit;
-				line-height: 1;
-				margin: 0.5em;
-				padding: 1em 2em;
-				transition: all 0.25s;
+			.bttn:hover:before {
+				-webkit-transition: 0.5s all ease;
+				transition: 0.5s all ease;
+				left: 0;
+				right: 0;
+				opacity: 1;
 			}
 		</style>
 		<script>
