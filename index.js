@@ -1,11 +1,15 @@
-// remove .html from link
+// Remove .html & index.html from the link
 let url = window.location.href;
-if (url.includes("index.html")) {
-	window.location.replace(url.replace("index.html", ""));
+// Dont affect localhost since removing .html from link breaks it
+if (!url.startsWith("http://127.0.0.1:5500")) {
+	if (url.includes("index.html")) {
+		window.location.replace(url.replace("index.html", ""));
+	}
+	if (url.includes(".html")) {
+		window.location.replace(url.replace(".html", ""));
+	}
 }
-if (url.includes(".html")) {
-	window.location.replace(url.replace(".html", ""));
-}
+
 // Open nav bar on click
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
@@ -23,7 +27,7 @@ navToggle.addEventListener("click", () => {
 });
 
 // Update color scheme
-// WARNING: Spaggetti code ahead - don't touch unless you know what you're doing
+// WARNING: Spaggetti code ahead - its really messy and unnecessarily complex but it works
 const updateColorScheme = (invert) => {
 	if (colorScheme == "dark") {
 		if (invert == "true") {
